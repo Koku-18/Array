@@ -8,7 +8,7 @@ Time complexity will be O(n) since we have to traverse the array only once
 Space complexity will be O(1) since we are not using extra space
 */
 
-class Solution{
+`class Solution{
 public:
     int removeDuplicates(vector<int>&A){
         int count=0;
@@ -20,3 +20,4 @@ public:
         return n-count;
     }
 };
+`
