@@ -1,0 +1,22 @@
+/*  Approach-
+We start the loop from i=1 and check for each element if the element at (i)th position is equal to element at (i-1)th position
+If it is, we increment the value of count
+Else it shall pass to the else-statement and the element at (i-count)th position will get updated
+And this loop will continue till the end of the array
+
+Time complexity will be O(n) since we have to traverse the array only once
+Space complexity will be O(1) since we are not using extra space
+*/
+
+class Solution{
+public:
+    int removeDuplicates(vector<int>&A){
+        int count=0;
+        int n=A.size();
+        for(int i=1; i<n; i++){
+            if(A[i]==A[i-1]) count++;
+            else A[i-count]=A[i];
+        }
+        return n-count;
+    }
+};
